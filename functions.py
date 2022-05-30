@@ -38,3 +38,8 @@ print(d)
 user_name = "Ismaeel"
 # Creating an f-string to say hello and my name within the {}
 print(f"Hello {user_name}")
+
+# An f-string with the formula quantity * Unit Price
+unit_price = 10.99
+quantity = 15
+print(f"Total = ${quantity * unit_price}")
