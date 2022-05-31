@@ -24,7 +24,7 @@ you input a param and you have the option to input a second one. """
 c = 1.23456789098765432100000000001
 # Creating a var named d and using the round() function
 # Note that the 2 means how many decimal places
-d = round(x, 2)
+d = round(c, 2)
 # Showing the value of c
 print(c)
 # Showing the value of d
