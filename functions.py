@@ -1,6 +1,9 @@
 # This file is to learn how to use functions in code.
 
 # Declaring the value of a
+from sympy import OneMatrix
+
+
 a = -4
 # Creating a var named b and using the abs() function
 b = abs(a)
@@ -40,6 +43,41 @@ user_name = "Ismaeel"
 print(f"Hello {user_name}")
 
 # An f-string with the formula quantity * Unit Price
-unit_price = 10.99
-quantity = 15
-print(f"Total = ${quantity * unit_price}")
+unit_price = 49.99
+quantity = 30
+""" Notice the :,.2f ? That is formatting the way the output looks.
+the : means that we are going to format the f-string
+the , makes any adjustment to the thousands place
+the .2f means the second decimal place FIXED """
+print(f"Total = ${quantity * unit_price:,.2f}")
+
+# In order to declare a percentage, we must use a float in Python
+sales_tax_rate = 0.065
+# This formatting is the same but for percentages. the .2% means the 2nd decimal point and add a % at the end
+print(f"Sales Tax Rate {sales_tax_rate:.2%}")
+
+# f-strings just doesn't have to be within print() you can name it. f-strings work like any other string
+
+# Introducing line breaking with f-string
+user1 = "Ismaeel"
+user2 = "Mo"
+user3 = "Mud"
+
+# One method is to use the \n method. Please note to use the \ not the /. The \n should be outside the {}
+output = f"{user1} \n{user2} \n{user3}"
+
+# Shows our f-string
+print(output)
+
+user4 = "Omar"
+user5 = "Jana"
+user6 = "Ali"
+
+# The method I prefer is the triple quote mark method. Easier to read and easier to write.
+second_output = f'''
+{user4}
+{user5}
+{user6}
+'''
+# Prints our line breaked f-string
+print(second_output)
