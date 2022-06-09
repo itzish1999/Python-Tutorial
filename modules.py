@@ -9,7 +9,6 @@ datetime.datetime - A single item of data consisting of date, time and optionall
 
 # Import datetime module and give it an alias of dt
 import datetime as dt
-from turtle import right
 
 # We are showing the date with the computers internal clock
 
@@ -85,3 +84,15 @@ age = now - birth_date_time
 print(f"Your age {age}")
 print(type(age))
 
+# My time vs UTC time
+
+here_now = dt.datetime.now()
+utc_now = dt.datetime.utcnow()
+
+# Difference of my time vs utc time
+time_difference = (utc_now - here_now)
+
+# Show results
+print(f"My Time    : {here_now:%I:%M %p}")
+print(f"UTC Time   : {utc_now:%I:%M %p}")
+print(f"Difference : {time_difference}")
