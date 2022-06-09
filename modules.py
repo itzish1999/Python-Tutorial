@@ -17,7 +17,7 @@ from turtle import right
 today = dt.datetime.today()
 
 # Manually store in today's date
-manual_today = dt.date(2020, 6, 8)
+manual_today = dt.date(2022, 6, 8)
 
 # datetime.time format with arguments
 # time = dt.time([hour, [minute, [second, [microsecond]]]])
@@ -30,7 +30,7 @@ no_time = dt.time()
 # date_time = dt.datetime(year, month, day, hour, [minute, second, [microsecond]])
 
 # datetime.datetime
-date_time = dt.datetime(2020, 6, 8, 22, 45, 50)
+date_time = dt.datetime(2022, 6, 8, 22, 45, 50)
 
 # You can even get the date / time for right now!
 right_now = dt.datetime.now()
@@ -45,3 +45,43 @@ print(date_time)
 # print(right_now)
 # Edited with f-string
 print( f"{right_now:%a, %b %d, %Y time %H:%M:%S}")
+
+# Calculating timespans
+
+""" In the programming world. Sometimes we need to know the duration or timespan.
+Timespan is how long in terms of years, months, weeks, days, hours, minutes or whatever.
+For timespans, the Python datetime module has a class called datetime.timedelta. """
+
+# timedelta is created AUTOMATICALLY whenver you subtract two dates, times, or datetimes to determine the duration between them
+# You can also define any timedelta using this syntax
+# datetime.timedelta(days=, seconds=, microseconds=, milliseconds=, minutes=, hours=, weeks=)
+
+"""
+AUTOMATICALLY DETERMINED 
+new_years_day = dt.date(2022, 1, 1)
+memorial_day = dt.date(2022, 5, 27)
+days_between = memorial_day - new_years_day
+print(days_between)
+"""
+
+# DEFINED
+new_years_day = dt.date(2022, 1, 1)
+memorial_day = dt.date(2022, 5, 27)
+duration = dt.timedelta(days = 146 ) # 146 = days between nyd and memorial day.
+print(new_years_day + duration) # You can also subtract
+
+# You can also use datatime.timedelta with datetime
+start_time = dt.datetime(2022, 3, 31, 8, 0, 0)
+finish_time = dt.datetime(2022, 3, 31, 14, 34, 45)
+time_between = finish_time - start_time
+print(f" Time {time_between}")
+print(type(time_between)) # Type just tells us what type of data it is. In this case timedelta; duration
+
+# Yet another timedelta ex. with an age calculator
+
+now = dt.date.today()
+birth_date_time = dt.date(1999, 8, 7)
+age = now - birth_date_time
+print(f"Your age {age}")
+print(type(age))
+

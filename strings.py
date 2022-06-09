@@ -44,7 +44,8 @@ print(second_output)
 < (left aligned)
 > (right aligned)
 ^ (centered) 
-Put any of these characters AFTER the : '''
+Put any of these characters AFTER the : 
+'''
 # Note that you can make the output however many characters apart: >20 for example. I used >9.
 
 new_unit_price = 49.95
