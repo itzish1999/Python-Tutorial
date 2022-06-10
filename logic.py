@@ -197,7 +197,6 @@ else:
 # Message that runs regardless of code. I could've printed in each operation, however that was more code. 
 # I got lazy... We concated instead
 print('Have a ' + beverage)
-
 #-----------------------------------LOOPS---------------------------------------------
 
 """ Sometimes you need to perform a task over and over again. That is where the for loop comes in!
@@ -228,5 +227,4 @@ print('All Done!')
 """ When specifying where to start the number on the left serves that purpose.
 Separated by a comma, the number on the right is the ending point.
 BE WEARY that the number on the left also means 1 number greater than the ending point!!!!"""
-
 #-----------------------------------LOOPING THROUGH A STRING---------------------------
