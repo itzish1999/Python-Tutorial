@@ -1,4 +1,5 @@
 import datetime as dt
+import random
 
 # This folder is for understanding how computers do things with data.
 
@@ -197,6 +198,7 @@ else:
 # Message that runs regardless of code. I could've printed in each operation, however that was more code. 
 # I got lazy... We concated instead
 print('Have a ' + beverage)
+
 #-----------------------------------LOOPS---------------------------------------------
 
 """ Sometimes you need to perform a task over and over again. That is where the for loop comes in!
@@ -227,4 +229,138 @@ print('All Done!')
 """ When specifying where to start the number on the left serves that purpose.
 Separated by a comma, the number on the right is the ending point.
 BE WEARY that the number on the left also means 1 number greater than the ending point!!!!"""
+
 #-----------------------------------LOOPING THROUGH A STRING---------------------------
+
+""" So far what we have covered is the idea that you can loop through a range() of numbers. 
+This is completely optional to do; in fact there are many other ways to loop through things.
+
+Lets take a string for an example. You can loop through any string you create and the computer will return each character in the string.
+Here is the syntax:
+
+for x in string:
+    do this
+    do this
+    ....
+do this when the loop is done
+
+replace x with any variable name that you'd like. The string should be text enclosed within quotation marks
+or
+a name of a variable that contains a string."""
+
+"""
+for string_loop in "Pickles":
+    print(string_loop)
+print("All Done!")
+^ Run this code and you will see Pickles spelled out! Here is a challenge.
+"""
+
+# Here is an example of a string loop with another variable that contains a string
+string_name = "New York"
+for string_loop in string_name:
+    print(string_loop)
+print("Loop Complete!")
+# ^ Run this code and see what the outcome is. You see how we gave our string a name and it printed it? The loop also included the space
+
+#--------------------------------------------------LOOPING THROUGH A LIST--------------------------------------------------------------
+
+""" In Python a list is a bunch of strings or numbers enclosed in a [] that is separated by commas.
+If you are familiar with different languages, it is basically an array.
+The syntax is the same with the string except you need to layout the list/array. """
+
+"""
+for list_loop in ["Apples", "Oranges", "Lemon", "Cheeries", "Grapes", "Pears"]:
+    print(list_loop)
+print("List Of Food")
+"""
+# ^ Run this code and you will see all of the items displayed on the console log or terminal.
+
+# Note you can also assign a variable that contains a list...
+
+food_list = ["Apples", "Oranges", "Lemon", "Cheeries", "Grapes", "Pears"]
+
+for list_loop in food_list:
+    print(list_loop)
+print("List Of Food!")
+
+""" Usually, you'd want to go through the whole list, yet there are some instances where you may want to break out of the loop
+to do so you can say to the loop to break if x condition is met.
+The syntax is as follows:
+
+for x in items:
+    if condition:
+        [do this... ] # What is in between the square brackets is optional
+        break
+    do this
+"""
+
+
+# answers = ["A", "B", "c", "D"]
+# for odd_one_out in answers:
+   #  if odd_one_out == "c":
+     #    print("c is Different From All Other Answers!")
+   #      break
+ #    print(odd_one_out)
+# print("We Succesfully Picked The Odd One Out...")
+# Run this code and see what happens
+
+
+""" In this example I created a for loop that cycled through the list of answers. I wanted to pick the only Letter that was different.
+in this case it was c. I added the if condition in which I specified with a comparison operator that if there is 'c',
+print out the statement I made and break from c. """
+
+# You can also use continue in a loop which is similar to break
+answers = ["A", "B", "c", "D"]
+for odd_one_out in answers:
+    if odd_one_out == "c":
+        print("Removed Odd One")
+        continue
+    print(odd_one_out)
+print("Loop Is Done")
+
+# You can also nest loops. Just be aware of indentation because each loop determines which line of code is located within:
+
+# Outer loop
+for outer in ["First", "Second", "Third"]:
+    print(outer)
+    # Inner loop
+    for inner in range(3):
+        print(inner + 1)
+print("Successfully Nested")
+
+# An alternative way to loop for, you can use while. 
+# There is a very subtle difference. For a for loop, you get a fixed number (one for each item).
+# For while loops you loop as long as (while) some condition is true. Below is the syntax:
+
+"""
+while condition:
+    do this ......
+    do this ......
+do this when loop is done.
+"""
+# Please note that when using while loops you have to make sure that the condition that makes the loop stop happens eventually. 
+# Otherwise the program would loop forever and you might have to shut off the program... Ex:
+
+counter = 65
+while counter < 91:
+    counter += 1
+    print(counter)
+print("Successful While Loop")
+
+# You can also use if and continue in a while loop
+
+print("Odd Numbers")
+counter = 0
+while counter < 10:
+    # Get a random number
+    number = random.randint(1, 999)
+    if int(number / 2) == number / 2:
+        # If it's an even number, don't print it.
+        continue
+    # Otherwise, if it's odd, print it and increment the counter.
+    print(number)
+    # Increment the loop counter
+    counter += 1
+print("Loop is Done")
+
+""" You can also use break in while loops as well"""
