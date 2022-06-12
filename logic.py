@@ -199,6 +199,8 @@ else:
 # I got lazy... We concated instead
 print('Have a ' + beverage)
 
+# Please note that the else is basically like "If all else fails use me instead."
+
 #-----------------------------------LOOPS---------------------------------------------
 
 """ Sometimes you need to perform a task over and over again. That is where the for loop comes in!
