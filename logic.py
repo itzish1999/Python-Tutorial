@@ -363,4 +363,17 @@ while counter < 10:
     counter += 1
 print("Loop is Done")
 
-""" You can also use break in while loops as well"""
+""" You can also use break in while loops as well in all honesty its impractical to break a while loop. 
+Here is why:
+breaking a while loop ends the while loop before the while loop ends. So I will just be providing the syntax:
+
+while condition:
+    do this
+    ....
+    if condition2:
+        break
+do this when loop is done
+
+if you're curious replace continue with break and the /2 by /5 in the loop above...
+
+"""
